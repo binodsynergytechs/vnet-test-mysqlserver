@@ -27,7 +27,6 @@ ENV GOENV=dev
 
 COPY --from=builder /app/main .
 
-COPY --from=builder /app/cmd/ cmd/
 COPY --from=builder /app/config/ config/
 
 EXPOSE 8092
