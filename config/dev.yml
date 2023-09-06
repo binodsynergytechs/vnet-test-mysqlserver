@@ -1,0 +1,70 @@
+database:
+  dsn: mongodb://twm-vnet-poc:h4obNp5GKT1qkhnIF0eUqTJDYHQE8PET4FHIEAUfpib9w21X4coYtzFRAwq14tYJYn2a1sIO2humACDbpAkgzw==@twm-vnet-poc.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@twm-vnet-poc@
+  db_name: vnet-poc
+  my_sql: twmadmin:Admin12345@tcp(twm-vnet-poc.mysql.database.azure.com)/twm_vnet?charset=utf8mb4&parseTime=True&loc=Local
+
+redis:
+  dsn: ''
+
+jwt:
+  secret: fe173c4c149af5494fdd3e062abd3a0e48df400ba6515417e3ace6160e130c59
+  expiry: 15
+  expiry_refresh: 1440
+  access_secret: fc51887e0ae1dc7f74403280491f32b5812b23970e7bea7d4f97d963374e1313
+  refresh_secret: 338df7dff7bb3f1864b13e7f4952a9b570ad5e96ae02eaec1a0dd12370f3d4f2
+  another_secret: fc9e1705da5653666bff5b572f6db9114d6bf58b4db39bc06bc8c0256e2e4319
+
+pagination:
+  offset: 0
+  limit: 10
+
+app:
+  name: TWM
+  version: 1.0.0
+  env: dev
+  port: :8892
+  ui_endpoint: https://mango-moss-097d7440f.3.azurestaticapps.net/
+  page_url: https://production2live.myshopify.com/pages/seller-profile/
+  hostname: https://young-hotels-tan.loca.lt
+  webhook_hostname: https://young-hotels-tan.loca.lt
+  customer_pwd: Admin@123
+  location_id: 81765662993
+  issuer: WMarketPlaceAdmin
+
+services:
+  user:
+    url: https://twm-as-devtwo-admin.azurewebsites.net/api/v1
+  product:
+    url: https://twm-as-devtwo-products.azurewebsites.net/m/api/v1
+  order:
+    url: http://localhost:8889/api/v1
+  seller:
+    url: https://twm-as-devtwo-seller.azurewebsites.net/api/v1
+  stripe:
+    url: https://twm-as-preprod-stripe.azurewebsites.net/api/v1
+  email:
+    url: https://twm-as-devtwo-email.azurewebsites.net/api/v1
+  connector:
+    url: https://twm-as-devtwo-shopify.azurewebsites.net/api/v1
+  document:
+    url: https://twm-as-devtwo-document.azurewebsites.net/api/v1
+
+service_bus:
+  conn_str: Endpoint=sb://twm-vnet-poc.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=V+1LfOQ6D/wFf2f9SWKDCi7qELu1LWWTn+ASbO9zV/w=
+
+sendgrid:
+  sender_name: 'DevTeam'
+  sender_email_id: 'suresh@synergytechs.net'
+  sendgrid_api_key: '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'
+
+storage:
+  account_name: twmvnetpoc
+  account_key: 30Z6EqzV+nUaXxIrzqF7OhOyNOBxRqGqXZXvHT0GrInzT4SFJ2QaIGIoV5Bzo/TLF8Dh9ZaEAxW8+ASt/i8Zew==
+  container: wmarketplace-devtwo-static
+  max_file_size_kb: 10048
+  doc_path: https://twmblobdevtwo.blob.core.windows.net/wmarketplace-devtwo-static/
+  doc_base: https://twmblobdevtwo.blob.core.windows.net/
+  doc_url: https://twmblobdevtwo.blob.core.windows.net/wmarketplace-devtwo-static/
+
+shopify:
+  version: 2023-04
