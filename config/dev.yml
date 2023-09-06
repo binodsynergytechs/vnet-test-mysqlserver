@@ -22,7 +22,7 @@ app:
   name: TWM
   version: 1.0.0
   env: dev
-  port: :8892
+  port: :8092
   ui_endpoint: https://mango-moss-097d7440f.3.azurestaticapps.net/
   page_url: https://production2live.myshopify.com/pages/seller-profile/
   hostname: https://young-hotels-tan.loca.lt

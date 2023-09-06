@@ -1,0 +1,16 @@
+version: "2"
+services:
+  app:
+    image: TWMVnetPOC.azurecr.io/vnetsql:latest
+    container_name: vnetsql
+    build: .
+    ports:
+      - 80:8092
+    restart: on-failure
+    volumes:
+      # without this volume mapping to the directory of our project, live reloading wont happen
+      - .:/usr/src/app
+    environment:
+      ENV: ${ENV}
+volumes:
+  api:
