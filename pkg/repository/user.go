@@ -33,3 +33,11 @@ func (ur *UserRepository) Update(user *models.User) error {
 func (ur *UserRepository) Delete(user *models.User) error {
 	return ur.DB.Delete(user).Error
 }
+
+func (ur *UserRepository) FindAll() ([]models.User, error) {
+	var users []models.User
+	if err := ur.DB.Find(&users).Error; err != nil {
+		return nil, err
+	}
+	return users, nil
+}

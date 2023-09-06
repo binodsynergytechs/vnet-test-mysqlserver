@@ -22,6 +22,7 @@ func InitRoutes(db *gorm.DB) {
 	router.GET("/", HealthCheck)
 	v1 := router.Group("/api/v1")
 	{
+		v1.GET("/users", userController.GetAllUser)
 		v1.POST("/users", userController.CreateUser)
 		v1.GET("/users/:id", userController.GetUserByID)
 		v1.PUT("/users/:id", userController.UpdateUser)

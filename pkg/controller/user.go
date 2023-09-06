@@ -103,3 +103,13 @@ func (uc *UserController) DeleteUser(c *gin.Context) {
 
 	c.JSON(http.StatusNoContent, nil)
 }
+
+func (uc *UserController) GetAllUser(c *gin.Context) {
+	users, err := uc.UserService.GetAllUsers()
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "error in finding users " + err.Error()})
+		return
+	}
+
+	c.JSON(http.StatusOK, users)
+}
